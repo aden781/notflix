@@ -35,9 +35,9 @@ app.get('/video', (req, res) => {
     const containerName = "videos"
     blobService.getBlobProperties(containerName, videoPath, (err, properties) => {
         if (err) {
-            console.error(`Error occurred getting properties for video ${containerName}/${videoPath}.`);
-            console.error(err && err.stack || err);
-            res.sendStatus(500);
+            console.error(`Error occurred getting properties for video ${containerName}/${videoPath}.`)
+            console.error(err && err.stack || err)
+            res.sendStatus(500)
             return
         }
 
